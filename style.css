@@ -1506,68 +1506,26 @@ img{
     transform: translateY(-5px);
 }
 
-/* ==================================
-   NAVBAR NEW PRIMAGAMA
-================================== */
+/************ NAVBAR ************/
 
 .navbar{
     width:100%;
-    padding:15px 30px;
+    height:80px;
+    padding:0 20px;
     background:#6a1b9a;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     position:fixed;
     top:0;
     left:0;
     z-index:1000;
-    box-sizing:border-box;
 }
 
-
-/* Tulisan Logo */
-
-.logo-text h2{
-    color:white;
-    font-size:32px;
-    margin:0;
-}
-
-.logo-text span{
-    color:#ffd54f;
-    font-size:18px;
-    letter-spacing:4px;
-}
-
-
-/* Logo Primagama */
+/* Logo */
 
 .logo-primagama img{
-    width:150px;
-}
-
-
-/* Menu Desktop */
-
-.nav-menu{
-    display:flex;
-    gap:30px;
-    list-style:none;
-}
-
-.nav-menu li{
-    list-style:none;
-}
-
-.nav-menu a{
-    color:white;
-    text-decoration:none;
-    font-size:17px;
-    font-weight:600;
-}
-
-.nav-menu a:hover{
-    color:#ffd54f;
+    width:120px;
 }
 
 
@@ -1581,28 +1539,24 @@ img{
 }
 
 
-/* ==========================
-   RESPONSIVE MOBILE
-========================== */
+/* Menu */
 
-@media (max-width:768px){
+.nav-menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
 
-    .navbar{
-        padding:15px 20px;
-    }
+.nav-menu a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
 
-    .logo-text h2{
-        font-size:22px;
-    }
 
-    .logo-text span{
-        font-size:14px;
-        letter-spacing:2px;
-    }
+/************ MOBILE ************/
 
-    .logo-primagama img{
-        width:110px;
-    }
+@media(max-width:768px){
 
     .hamburger{
         display:block;
@@ -1611,12 +1565,12 @@ img{
     .nav-menu{
         display:none;
         flex-direction:column;
-        position:absolute;
+        position:fixed;
         top:80px;
         left:0;
         width:100%;
         background:#6a1b9a;
-        padding:20px 0;
+        padding:20px;
         text-align:center;
         gap:20px;
     }
@@ -1627,27 +1581,37 @@ img{
 
 }
 
-/********************************
-        JUDUL WEBSITE
-********************************/
+/************ JUDUL WEBSITE ************/
 
 .judul-website{
+    margin-top:100px;
+    padding:30px 20px;
     text-align:center;
-    margin-top:110px;
 }
 
 .judul-website h1{
     margin:0;
-    font-size:40px;
     color:#5b21b6;
+    font-size:30px;
+    font-weight:800;
 }
 
 .judul-website p{
-    margin-top:8px;
-    font-size:20px;
+    margin-top:10px;
     color:#f5b700;
+    font-size:20px;
+    font-weight:700;
     letter-spacing:3px;
 }
+
+.judul-website span{
+    display:block;
+    margin-top:15px;
+    color:#666;
+    font-size:15px;
+    font-weight:500;
+}
+
 /* ==================================
    AGAR KONTEN TIDAK TERTUTUP NAVBAR
 ================================== */
