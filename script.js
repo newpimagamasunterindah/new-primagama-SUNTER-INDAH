@@ -219,9 +219,7 @@ const navMenu = document.getElementById("nav-menu");
 if (hamburger) {
 
     hamburger.addEventListener("click", () => {
-
         navMenu.classList.toggle("active");
-
     });
 
 }
