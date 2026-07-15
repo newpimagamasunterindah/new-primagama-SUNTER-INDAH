@@ -1506,30 +1506,48 @@ img{
     transform: translateY(-5px);
 }
 
-/* ===================
-   NAVBAR
-=================== */
+/* ==================================
+   NAVBAR NEW PRIMAGAMA
+================================== */
 
 .navbar{
     width:100%;
     padding:15px 30px;
     background:#6a1b9a;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
     position:fixed;
     top:0;
     left:0;
     z-index:1000;
+    box-sizing:border-box;
 }
 
-.logo img{
-    width:130px;
+
+/* Tulisan Logo */
+
+.logo-text h2{
+    color:white;
+    font-size:32px;
+    margin:0;
 }
 
-/* ===================
-   MENU
-=================== */
+.logo-text span{
+    color:#ffd54f;
+    font-size:18px;
+    letter-spacing:4px;
+}
+
+
+/* Logo Primagama */
+
+.logo-primagama img{
+    width:150px;
+}
+
+
+/* Menu Desktop */
 
 .nav-menu{
     display:flex;
@@ -1537,35 +1555,54 @@ img{
     list-style:none;
 }
 
-.nav-menu li a{
+.nav-menu li{
+    list-style:none;
+}
+
+.nav-menu a{
     color:white;
     text-decoration:none;
     font-size:17px;
     font-weight:600;
 }
 
-.nav-menu li a:hover{
+.nav-menu a:hover{
     color:#ffd54f;
 }
 
 
-/* ===================
-   HAMBURGER
-=================== */
+/* Hamburger */
 
 .hamburger{
     display:none;
-    font-size:30px;
+    font-size:32px;
     color:white;
     cursor:pointer;
 }
 
 
-/* ===================
-   RESPONSIVE HP
-=================== */
+/* ==========================
+   RESPONSIVE MOBILE
+========================== */
 
-@media(max-width:768px){
+@media (max-width:768px){
+
+    .navbar{
+        padding:15px 20px;
+    }
+
+    .logo-text h2{
+        font-size:22px;
+    }
+
+    .logo-text span{
+        font-size:14px;
+        letter-spacing:2px;
+    }
+
+    .logo-primagama img{
+        width:110px;
+    }
 
     .hamburger{
         display:block;
@@ -1575,20 +1612,17 @@ img{
         display:none;
         flex-direction:column;
         position:absolute;
-        top:75px;
+        top:80px;
         left:0;
         width:100%;
         background:#6a1b9a;
         padding:20px 0;
         text-align:center;
+        gap:20px;
     }
 
     .nav-menu.active{
         display:flex;
-    }
-
-    .nav-menu li{
-        margin:15px 0;
     }
 
 }
