@@ -1632,56 +1632,28 @@ img{
             JUDUL WEBSITE
 ========================================== */
 
-.judul-website{
+/* ===========================
+   JUDUL NEW PRIMAGAMA
+=========================== */
 
-    margin-top:80px;
-    padding:40px 25px;
+.hero-brand{
 
-    text-align:center;
-
-    background:linear-gradient(
-        135deg,
-        #6D28D9,
-        #8B5CF6
-    );
-
-    border-bottom-left-radius:30px;
-    border-bottom-right-radius:30px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-}
-
-.judul-website h1{
-
-    margin:0;
-    color:white;
-    font-size:32px;
+    color:#FFFFFF;
+    font-size:52px;
     font-weight:800;
-    letter-spacing:1px;
+    margin-bottom:5px;
+    line-height:1.1;
 
 }
 
-.judul-website p{
+.hero-cabang{
 
-    margin-top:10px;
     color:#FFD54F;
-    font-size:22px;
+    font-size:28px;
     font-weight:700;
-    letter-spacing:3px;
+    margin-bottom:25px;
 
 }
-
-.judul-website span{
-
-    display:block;
-    margin-top:15px;
-    color:white;
-    font-size:16px;
-    line-height:1.7;
-
-}
-
 
 /* ==========================================
         AGAR TIDAK TERTUTUP NAVBAR
