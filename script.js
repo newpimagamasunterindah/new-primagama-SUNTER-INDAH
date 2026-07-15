@@ -210,17 +210,17 @@ if (scrollBtn) {
 
 
 /* =============================
-   MENU MOBILE
+   HAMBURGER MENU
 ============================= */
 
-const menuBtn = document.querySelector(".menu-btn");
-const nav = document.querySelector("nav");
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
 
-if (menuBtn) {
+if (hamburger) {
 
-    menuBtn.addEventListener("click", () => {
+    hamburger.addEventListener("click", () => {
 
-        nav.classList.toggle("show");
+        navMenu.classList.toggle("active");
 
     });
 
