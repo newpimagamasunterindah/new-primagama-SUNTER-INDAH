@@ -1626,3 +1626,11 @@ img{
     }
 
 }
+
+/* ==================================
+   AGAR KONTEN TIDAK TERTUTUP NAVBAR
+================================== */
+
+body{
+    padding-top:90px;
+}
