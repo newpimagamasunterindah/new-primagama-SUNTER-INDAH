@@ -1,9 +1,6 @@
-/* ===========================================
-   NEW PRIMAGAMA SUNTER INDAH
-   STYLE.CSS - TAHAP 1
-=========================================== */
-
-/* ---------- RESET ---------- */
+/* ==========================================
+                RESET CSS
+========================================== */
 
 *{
     margin:0;
@@ -17,1511 +14,47 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#f8f8fc;
-    color:#000000;
+    background:#F8F8FC;
+    color:#222;
     overflow-x:hidden;
 }
 
-img{
-    display:block;
-    max-width:100%;
-}
 
-a{
-    text-decoration:none;
-}
+/* ==========================================
+                CONTAINER
+========================================== */
 
-ul{
-    list-style:none;
-}
-
-/* ---------- WARNA ---------- */
-
-:root{
-
-    --primary:#040008;
-    --secondary:#F4C430;
-    --white:#ffffff;
-    --black:#f3eeee;
-    --gray:#070000;
-    --light:#f6f6fb;
-
-}
-
-/* ---------- HEADER ---------- */
-
-header{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-
-    height:85px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:0 8%;
-
-    background:rgba(79, 2, 94, 0.92);
-
-    backdrop-filter:blur(12px);
-
-    z-index:999;
-
-}
-
-/* ---------- LOGO ---------- */
-
-.logo h2{
-
-    color:var(--white);
-
-    font-size:28px;
-
-    font-weight:700;
-
-    line-height:1;
-
-}
-
-.logo span{
-
-    display:block;
-
-    color:var(--secondary);
-
-    font-size:14px;
-
-    margin-top:6px;
-
-    letter-spacing:2px;
-
-}
-
-/* ---------- MENU ---------- */
-
-nav{
-
-    display:flex;
-
-    gap:35px;
-
-}
-
-nav a{
-
-    color:white;
-
-    font-size:16px;
-
-    font-weight:500;
-
-    transition:.3s;
-
-}
-
-nav a:hover{
-
-    color:var(--secondary);
-
-}
-
-
-/* ===========================
-   HERO
-=========================== */
-
-.hero{
-    position:relative;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    padding-top:90px;
-    overflow:hidden;
-
-    background-image:
-        linear-gradient(
-            rgba(91,33,182,0.65),
-            rgba(109,40,217,0.65)
-        ),
-        url("primagama.png.jpeg");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-}
-
-/* Isi Hero berada di atas background */
-.hero-content{
-    position:relative;
-    z-index:2;
-
+.container{
     width:90%;
     max-width:1200px;
     margin:auto;
-
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
 }
 
-.hero-text{
-    max-width:650px;
-}
-
-.hero-text .tag{
-    display:inline-block;
-    color:#FFD54F;
-    font-weight:600;
-    margin-bottom:20px;
-}
-
-.hero-text h1{
-    color:#fff;
-    font-size:60px;
-    line-height:1.2;
-    margin-bottom:25px;
-}
-
-.hero-text h1 span{
-    color:#FFD54F;
-}
-
-.hero-text p{
-    color:#f3f3f3;
-    font-size:18px;
-    line-height:1.8;
-    margin-bottom:35px;
-}
-
-/* Tombol */
-.btn{
-    display:inline-block;
-    padding:16px 38px;
-    background:#FFD54F;
-    color:#333;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-5px);
-}
-/* ---------- HERO TEXT ---------- */
-
-.hero-text{
-
-    width:50%;
-
-}
-
-.hero-text h1{
-
-    color:white;
-
-    font-size:58px;
-
-    line-height:1.2;
-
-    margin-bottom:25px;
-
-}
-
-.hero-text p{
-
-    color:#f2f2f2;
-
-    font-size:18px;
-
-    line-height:1.8;
-
-    margin-bottom:40px;
-
-}
-
-/* ---------- BUTTON ---------- */
-
-.btn{
-
-    display:inline-block;
-
-    padding:16px 38px;
-
-    background:var(--secondary);
-
-    color:#222;
-
-    border-radius:50px;
-
-    font-weight:600;
-
-    transition:.35s;
-
-}
-
-.btn:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.2);
-
-}
-/* ---------- ANIMASI ---------- */
-
-@keyframes melayang{
-
-    0%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-18px);
-    }
-
-    100%{
-        transform:translateY(0);
-    }
-
-}
-.hero-text{
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: black !important;
-    position: relative;
-    z-index: 999;
-}
 
 /* ==========================================
-   ANIMASI WEBSITE NEW PRIMAGAMA
+                WARNA WEBSITE
 ========================================== */
 
-/* Hero Section Muncul dari Bawah */
-.hero-content{
-    opacity: 0;
-    transform: translateY(50px);
-    animation: heroFade 1.5s ease forwards;
-}
+:root{
 
-@keyframes heroFade{
-    from{
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* Tagline Muncul Sedikit Terlambat */
-.hero .tag{
-    opacity: 0;
-    animation: fadeText 1s ease forwards;
-    animation-delay: 0.3s;
-}
-
-
-/* Judul Hero */
-.hero h1{
-    opacity: 0;
-    animation: fadeText 1s ease forwards;
-    animation-delay: 0.6s;
-}
-
-
-/* Deskripsi Hero */
-.hero p{
-    opacity: 0;
-    animation: fadeText 1s ease forwards;
-    animation-delay: 0.9s;
-}
-
-
-/* Tombol Hero */
-.hero-buttons{
-    opacity: 0;
-    animation: fadeText 1s ease forwards;
-    animation-delay: 1.2s;
-}
-
-
-/* Animasi Fade */
-@keyframes fadeText{
-    from{
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* Floating Animation untuk Gambar */
-.hero-image img{
-    animation: floating 4s ease-in-out infinite;
-}
-
-@keyframes floating{
-    0%{
-        transform: translateY(0px);
-    }
-
-    50%{
-        transform: translateY(-15px);
-    }
-
-    100%{
-        transform: translateY(0px);
-    }
-}
-
-
-/* Hover Card */
-.program-card,
-.fasilitas-card,
-.target-card{
-    transition: 0.4s ease;
-}
-
-.program-card:hover,
-.fasilitas-card:hover,
-.target-card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-}
-
-
-/* Hover Tombol */
-.btn{
-    transition: all 0.3s ease;
-}
-
-.btn:hover{
-    transform: translateY(-3px);
-}
-
-
-/* Section Muncul Halus */
-section{
-    animation: sectionFade 1.2s ease;
-}
-
-@keyframes sectionFade{
-    from{
-        opacity: 0;
-    }
-
-    to{
-        opacity: 1;
-    }
-}
-
-
-/* Navbar */
-header{
-    animation: navbarDown 1s ease;
-}
-
-@keyframes navbarDown{
-    from{
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* Efek Hover Logo */
-.logo img{
-    transition: 0.3s ease;
-}
-
-.logo img:hover{
-    transform: scale(1.08);
-}
-
-
-/* Smooth Scroll */
-html{
-    scroll-behavior: smooth;
-}
-
-/* ---------- SECTION ---------- */
-
-section{
-
-    padding:100px 8%;
+    --primary:#6D28D9;
+    --secondary:#FFD54F;
+    --white:#FFFFFF;
+    --gray:#666666;
+    --light:#F8F8FC;
+    --dark:#222222;
 
 }
 
-.section-title{
-
-    text-align:center;
-
-    margin-bottom:60px;
-
-}
-
-.section-title h2{
-
-    color:var(--primary);
-
-    font-size:40px;
-
-    margin-bottom:12px;
-
-}
-
-.section-title p{
-
-    color:var(--gray);
-
-    max-width:700px;
-
-    margin:auto;
-
-    line-height:1.8;
-
-}
 
 /* ==========================================
-   MENGAPA MEMILIH KAMI
-========================================== */
-
-.fasilitas{
-    padding:100px 8%;
-    background:#f8f8fc;
-}
-
-.fasilitas .section-title{
-    text-align:center;
-    font-size:42px;
-    font-weight:700;
-    color:#5b21b6;
-    margin-bottom:15px;
-}
-
-.fasilitas .section-subtitle{
-    text-align:center;
-    font-size:18px;
-    color:#666;
-    margin-bottom:60px;
-}
-.fasilitas-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
-    margin-top:15px;
-    align-items:stretch;
-}
-
-.fasilitas-card{
-    background:#fff;
-    border:3px solid #7c3aed;
-    border-radius:25px;
-    padding:40px 30px;
-    text-align:center;
-    transition:.4s;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.fasilitas-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 18px 35px rgba(0,0,0,.15);
-}
-
-.fasilitas-card .icon{
-    width:95px;
-    height:95px;
-    margin:0 auto 25px;
-    border-radius:50%;
-    background:#FFD54F;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.fasilitas-card .icon i{
-    font-size:42px;
-    color:#6d28d9;
-}
-
-.fasilitas-card h3{
-    font-size:30px;
-    color:#6d28d9;
-    margin-bottom:20px;
-    font-weight:700;
-    line-height:1.4;
-}
-
-.fasilitas-card p{
-    font-size:18px;
-    color:#555;
-    line-height:1.8;
-}
-
-.fasilitas-card ul{
-    list-style:none;
-    padding:0;
-    margin-top:15px;
-}
-
-.fasilitas-card ul li{
-    font-size:18px;
-    color:#555;
-    margin:8px 0;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    .fasilitas{
-        padding:70px 5%;
-    }
-
-    .fasilitas .section-title{
-        font-size:32px;
-    }
-
-    .fasilitas-grid{
-        grid-template-columns:1fr;
-    }
-
-    .fasilitas-card{
-        padding:30px 20px;
-    }
-
-    .fasilitas-card h3{
-        font-size:24px;
-    }
-
-    .fasilitas-card p,
-    .fasilitas-card ul li{
-        font-size:16px;
-    }
-
-    .fasilitas-card .icon{
-        width:80px;
-        height:80px;
-    }
-
-    .fasilitas-card .icon i{
-        font-size:34px;
-    }
-}
-/* ===========================================
-   FASILITAS
-=========================================== */
-
-.fasilitas,
-.fasilitas-belajar{
-    padding:100px 8%;
-    background:#f8f8fc;
-}
-
-.fasilitas-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
-    margin-top:50px;
-    align-items:stretch;
-}
-
-.fasilitas-card{
-    background:#fff;
-    border:3px solid #5E2B97;
-    border-radius:20px;
-    padding:35px 25px;
-    text-align:center;
-    transition:.3s;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
-
-    min-height:260px;
-}
-
-.fasilitas-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(0,0,0,.12);
-}
-
-.fasilitas-card i{
-    width:75px;
-    height:75px;
-    background:#F4C430;
-    color:#5E2B97;
-    border-radius:50%;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-size:30px;
-    margin-bottom:20px;
-}
-
-.fasilitas-card h3{
-    color:#5E2B97;
-    font-size:24px;
-    margin-bottom:15px;
-
-    min-height:60px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.fasilitas-card p{
-    color:#666;
-    line-height:1.7;
-    flex:1;
-}
-
-/* Tablet */
-@media (max-width:1100px){
-    .fasilitas-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-/* HP */
-@media (max-width:768px){
-    .fasilitas-grid{
-        grid-template-columns:1fr;
-    }
-
-    .fasilitas-card{
-        min-height:auto;
-    }
-}
-/* ===========================================
-   MENGAPA MEMILIH KAMI
-=========================================== */
-
-.why-container{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:30px;
-
-margin-top:50px;
-
-}
-
-.why-card{
-
-background:#fff;
-
-padding:35px;
-
-border-radius:20px;
-
-text-align:center;
-
-border:3px solid #5E2B97;
-
-transition:.4s;
-
-}
-
-.why-card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.why-card i{
-
-font-size:40px;
-
-color:#F4C430;
-
-margin-bottom:20px;
-
-}
-
-.why-card h3{
-
-margin-bottom:15px;
-
-color:#5E2B97;
-
-}
-/* ==========================
-   BACK TO TOP
-========================== */
-
-.back-top{
-
-    position:fixed;
-
-    right:25px;
-
-    bottom:25px;
-
-    width:50px;
-
-    height:50px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:var(--primary);
-
-    color:white;
-
-    font-size:20px;
-
-    cursor:pointer;
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transition:.3s;
-
-    z-index:999;
-
-}
-
-.back-top.show{
-
-    opacity:1;
-
-    visibility:visible;
-
-}
-
-.back-top:hover{
-
-    background:var(--secondary);
-
-    color:#222;
-
-}
-
-
-/* ===========================================
-   PROGRAM BELAJAR
-=========================================== */
-
-.program{
-    padding:100px 8%;
-    background:#f8f8fc;
-}
-
-.program-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
-    margin-top:50px;
-}
-
-.program-card{
-    background:#fff;
-    border:3px solid #5E2B97;
-    border-radius:20px;
-    padding:35px 25px;
-    text-align:center;
-    transition:.3s;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
-
-    min-height:430px;
-}
-
-.program-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(0,0,0,.12);
-}
-
-.program-icon{
-    width:75px;
-    height:75px;
-    border-radius:50%;
-    background:#F4C430;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    margin-bottom:20px;
-}
-
-.program-icon i{
-    color:#5E2B97;
-    font-size:30px;
-}
-
-.program-card h3{
-    color:#5E2B97;
-    font-size:26px;
-    margin:15px 0;
-    min-height:70px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.program-card ul{
-    list-style:none;
-    padding:0;
-    margin:0;
-    width:100%;
-}
-
-.program-card li{
-    color:#555;
-    margin:10px 0;
-    line-height:1.6;
-}
-
-@media(max-width:1100px){
-    .program-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:768px){
-    .program-grid{
-        grid-template-columns:1fr;
-    }
-}
-
-.about-feature{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    margin-top:20px;
-    align-items:stretch;
-}
-
-
-.feature-card{
-    background:#fff;
-    padding:35px 25px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
-    border-top:5px solid #5E2B97;
-}
-
-.feature-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(94,43,151,.15);
-}
-
-.feature-card i{
-    font-size:55px;
-    color:#5E2B97;
-    margin-bottom:20px;
-}
-
-.feature-card h3{
-    font-size:24px;
-    color:#222;
-    margin-bottom:15px;
-}
-
-.feature-card p{
-    color:#666;
-    line-height:1.8;
-    font-size:16px;
-}
-
-footer{
-    background:#1f2937;
-    color:#fff;
-    padding:70px 8% 20px;
-}
-
-.footer-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:50px;
-}
-
-.footer-box h3{
-    color:#F4C430;
-    margin-bottom:20px;
-    font-size:23px;
-}
-
-.footer-box p{
-    color:#d6d6d6;
-    line-height:1.8;
-    margin-bottom:15px;
-    text-align:left;
-}
-
-.footer-box a{
-    display:block;
-    color:#d6d6d6;
-    margin-bottom:12px;
-    transition:.3s;
-}
-
-.footer-box a:hover{
-    color:#F4C430;
-    padding-left:8px;
-}
-
-.footer-box i{
-    color:#F4C430;
-    margin-right:10px;
-}
-
-.footer-bottom{
-    border-top:1px solid rgba(255,255,255,.15);
-    margin-top:40px;
-    padding-top:20px;
-    text-align:center;
-    color:#cfcfcf;
-    font-size:15px;
-}
-
-/* ==========================================
-   RESPONSIVE MOBILE
-========================================== */
-
-@media (max-width: 768px){
-
-    /* Hero */
-    .hero{
-        padding: 120px 20px 80px;
-    }
-
-    .hero-content{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .hero-text h1{
-        font-size: 32px;
-        line-height: 1.4;
-    }
-
-    .hero-text p{
-        font-size: 16px;
-    }
-
-    .hero-image img{
-        width: 100%;
-        max-width: 350px;
-        height: auto;
-    }
-
-
-    /* Button */
-    .hero-buttons{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-
-    .btn{
-        width: 100%;
-        max-width: 280px;
-    }
-
-
-    /* Grid Program */
-    .program-grid{
-        grid-template-columns: 1fr;
-    }
-
-    .program-card{
-        width: 100%;
-    }
-
-
-    /* Grid Fasilitas */
-    .fasilitas-grid{
-        grid-template-columns: 1fr;
-    }
-
-    .fasilitas-card{
-        width: 100%;
-    }
-
-
-    /* Grid Target */
-    .target-grid{
-        grid-template-columns: 1fr;
-    }
-
-    .target-card{
-        width: 100%;
-    }
-
-
-    /* Statistik */
-    .stats-grid{
-        grid-template-columns: 1fr;
-    }
-
-
-    /* Navbar */
-    nav{
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links{
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-
-    /* Semua gambar */
-    img{
-        max-width: 100%;
-        height: auto;
-    }
-
-
-    /* Maps */
-    iframe{
-        width: 100%;
-        height: 300px;
-    }
-
-
-    /* Section */
-    section{
-        padding: 80px 20px;
-    }
-
-
-    /* Judul Section */
-    .section-title h2{
-        font-size: 28px;
-    }
-
-}
-
-
-/* HP KECIL */
-
-@media (max-width: 480px){
-
-    .hero-text h1{
-        font-size: 26px;
-    }
-
-    .hero-text p{
-        font-size: 14px;
-    }
-
-    .section-title h2{
-        font-size: 24px;
-    }
-
-    .btn{
-        font-size: 14px;
-        padding: 12px 18px;
-    }
-
-}
-/*==========================
-KONTAK BARU
-==========================*/
-
-.kontak{
-
-padding:80px 8%;
-
-background:#fafafa;
-
-}
-
-.kontak-center{
-
-max-width:700px;
-
-margin:auto;
-
-text-align:center;
-
-background:#fff;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-margin-bottom:45px;
-
-}
-
-.kontak-center h3{
-
-color:#5b21b6;
-
-font-size:28px;
-
-margin-bottom:25px;
-
-}
-
-.kontak-center p{
-
-margin:20px 0;
-
-line-height:1.8;
-
-font-size:17px;
-
-}
-
-.kontak-center i{
-
-font-size:28px;
-
-color:#6d28d9;
-
-margin-bottom:10px;
-
-}
-
-.kontak-center a{
-
-color:#333;
-
-text-decoration:none;
-
-font-weight:600;
-
-}
-
-.maps{
-
-margin-top:20px;
-
-border-radius:20px;
-
-overflow:hidden;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-}
-
-/* ================= TENTANG KAMI ================= */
-
-.about-feature{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 60px;
-    align-items: stretch;
-}
-
-.feature-card{
-    background: #fff;
-    border-radius: 25px;
-    padding: 40px 30px;
-    text-align: center;
-    border: 2px solid #ece7ff;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    transition: .3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 340px;
-}
-
-.feature-card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(109,40,217,.18);
-}
-
-.feature-card i{
-    font-size: 60px;
-    color: #6d28d9;
-    margin-bottom: 25px;
-}
-
-.feature-card h3{
-    font-size: 28px;
-    margin-bottom: 18px;
-    color: #222;
-}
-
-.feature-card p{
-    font-size: 17px;
-    color: #666;
-    line-height: 1.8;
-}
-
-/* Tablet */
-@media (max-width:992px){
-    .about-feature{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-
-/* HP */
-@media (max-width:768px){
-    .about-feature{
-        grid-template-columns:1fr;
-    }
-}
-
-/* ===========================
-   JUDUL SECTION
-=========================== */
-
-.section-title{
-    text-align:center;
-    margin-bottom:15px;   /* sebelumnya mungkin 40-60px */
-}
-
-.section-title h2{
-    font-size:42px;
-    margin-bottom:8px;
-}
-
-.section-title p{
-    color:#666;
-    margin-bottom:0;
-}
-
-
-/* Agar website tidak melebar ke samping */
-html,
-body{
-    overflow-x: hidden;
-    width: 100%;
-}
-
-/* Semua gambar menyesuaikan ukuran layar */
-img{
-    max-width: 100%;
-    height: auto;
-}
-
-/* RESPONSIVE HP */
-@media screen and (max-width:768px){
-
-    .container{
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    /* Navbar */
-    .navbar{
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    nav a{
-        font-size: 14px;
-    }
-
-    /* Hero Section */
-    .hero-content{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text h1{
-        font-size: 32px;
-        line-height: 1.4;
-    }
-
-    .hero-text p{
-        font-size: 16px;
-    }
-
-    /* Semua Grid menjadi 1 kolom */
-    .program-grid,
-    .fasilitas-grid,
-    .target-grid,
-    .stats-grid{
-        grid-template-columns: 1fr;
-    }
-
-    /* Tombol */
-    .btn{
-        width: 100%;
-    }
-
-    /* Maps */
-    iframe{
-        width: 100%;
-        height: 300px;
-    }
-
-    /* Section */
-    section{
-        padding: 80px 20px;
-    }
-
-}
-
-/* HP kecil */
-@media screen and (max-width:480px){
-
-    .hero-text h1{
-        font-size: 26px;
-    }
-
-    .hero-text p{
-        font-size: 14px;
-    }
-
-    nav a{
-        font-size: 13px;
-    }
-
-}
-
-/* ==========================================
-   LOGO PRIMAGAMA
-========================================== */
-
-.logo-primagama{
-    position: fixed;
-    top: 15px;
-    right: 20px;
-    z-index: 9999;
-}
-
-.logo-primagama img{
-    width: 160px;
-    height: auto;
-    object-fit: contain;
-}
-
-
-/* Responsive HP */
-
-@media (max-width:768px){
-
-    .logo-primagama{
-        top: 15px;
-        right: 20px;
-    }
-
-    .logo-primagama img{
-       width: 90px;
-    }
-
-}
-
-/* Tombol Scroll ke Atas */
-
-#scrollTopBtn{
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 55px;
-    height: 55px;
-    border: none;
-    border-radius: 50%;
-    background-color: #FFD54F;
-    color: #333;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    display: none;
-    transition: all 0.3s ease;
-    z-index: 999;
-}
-
-/* Hover */
-
-#scrollTopBtn:hover{
-    transform: translateY(-3px);
-}
-
-/* Menampilkan tombol */
-
-.show{
-    display: block !important;
-}
-
-#scrollTopBtn{
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 55px;
-    height: 55px;
-    border: none;
-    border-radius: 50%;
-    background: #FFD700;
-    color: #000;
-    cursor: pointer;
-    display: none;
-    z-index: 99999;
-    box-shadow: 0 5px 15px rgba(0,0,0,.2);
-    transition: .3s;
-}
-
-#scrollTopBtn:hover{
-    transform: translateY(-5px);
-}
-
-/* ==========================================
-            NAVBAR NEW PRIMAGAMA
+                NAVBAR
 ========================================== */
 
 .navbar{
 
     width:100%;
-    height:80px;
-
-    padding:0 25px;
-
-    background:#6D28D9;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    height:85px;
 
     position:fixed;
     top:0;
@@ -1529,7 +62,18 @@ img{
 
     z-index:9999;
 
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 60px;
+
+    background:rgba(109,40,217,0.95);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.12);
 
 }
 
@@ -1548,32 +92,36 @@ img{
 
 .logo-primagama img{
 
-    width:120px;
+    width:135px;
     height:auto;
+    object-fit:contain;
 
 }
 
 
 /* ==========================================
-                MENU
+                MENU NAVBAR
 ========================================== */
 
 .nav-menu{
 
     display:flex;
-    gap:30px;
+    align-items:center;
+    gap:35px;
 
 }
 
 
 .nav-menu a{
 
-    color:white;
     text-decoration:none;
+
+    color:white;
+
     font-size:16px;
     font-weight:600;
 
-    transition:.3s;
+    transition:.3s ease;
 
 }
 
@@ -1585,17 +133,306 @@ img{
 }
 
 
+.nav-menu a.active{
+
+    color:#FFD54F;
+
+}
+
+
 /* ==========================================
-                HAMBURGER
+                HAMBURGER MENU
 ========================================== */
 
 .hamburger{
 
     display:none;
 
-    font-size:35px;
+    font-size:34px;
     color:white;
+
     cursor:pointer;
+
+}
+
+
+/* ==========================================
+                HERO SECTION
+========================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding-top:90px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(109,40,217,.65),
+            rgba(91,33,182,.65)
+
+        ),
+
+        url("primagama.png.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+
+
+/* ==========================================
+                HERO CONTENT
+========================================== */
+
+.hero-content{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+
+}
+
+
+/* ==========================================
+                HERO TEXT
+========================================== */
+
+.hero-text{
+
+    max-width:700px;
+
+    animation:
+    heroFade 1.2s ease;
+
+}
+
+
+.hero-text .tag{
+
+    display:inline-block;
+
+    color:#FFD54F;
+
+    font-size:18px;
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+
+.hero-text h1{
+
+    color:white;
+
+    font-size:62px;
+
+    line-height:1.25;
+
+    margin-bottom:15px;
+
+    font-weight:800;
+
+}
+
+
+.hero-text h2{
+
+    color:#FFD54F;
+
+    font-size:34px;
+
+    margin-bottom:25px;
+
+    font-weight:700;
+
+}
+
+
+.hero-text p{
+
+    color:white;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+
+/* ==========================================
+                BUTTON HERO
+========================================== */
+
+.btn{
+
+    display:inline-block;
+
+    padding:16px 40px;
+
+    background:#FFD54F;
+
+    color:#222;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.3s ease;
+
+}
+
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.18);
+
+}
+
+
+/* ==========================================
+        CARD NEW PRIMAGAMA
+========================================== */
+
+.judul-website{
+
+    width:90%;
+
+    margin:70px auto;
+
+    padding:50px 30px;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #6D28D9,
+        #8B5CF6
+
+    );
+
+    border-radius:30px;
+
+    box-shadow:
+    0 20px 40px rgba(109,40,217,.25);
+
+}
+
+
+.judul-website h1{
+
+    color:white;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+
+.judul-website h2{
+
+    color:#FFD54F;
+
+    font-size:28px;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+
+.judul-website p{
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:500;
+
+}
+
+
+/* ==========================================
+                ANIMASI
+========================================== */
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================
+            RESPONSIVE TABLET
+========================================== */
+
+@media(max-width:992px){
+
+
+    .hero-text h1{
+
+        font-size:48px;
+
+    }
+
+
+    .hero-text h2{
+
+        font-size:28px;
+
+    }
+
+
+    .judul-website h1{
+
+        font-size:38px;
+
+    }
+
 
 }
 
@@ -1607,25 +444,25 @@ img{
 @media(max-width:768px){
 
 
-    /* Navbar */
+    /* NAVBAR */
 
     .navbar{
 
-        padding:0 20px;
+        padding:0 25px;
 
     }
 
 
-    /* Logo */
+    /* LOGO */
 
     .logo-primagama img{
 
-        width:95px;
+        width:100px;
 
     }
 
 
-    /* Hamburger */
+    /* HAMBURGER */
 
     .hamburger{
 
@@ -1634,7 +471,7 @@ img{
     }
 
 
-    /* Menu */
+    /* MENU */
 
     .nav-menu{
 
@@ -1644,25 +481,22 @@ img{
 
         position:fixed;
 
-        top:80px;
+        top:85px;
         left:0;
 
         width:100%;
 
         background:#6D28D9;
 
-        padding:25px 0;
+        padding:30px 0;
 
-        gap:20px;
+        gap:25px;
 
-        text-align:center;
-
-        box-shadow:0 10px 20px rgba(0,0,0,.15);
+        box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
 
     }
 
-
-    /* Ketika hamburger ditekan */
 
     .nav-menu.active{
 
@@ -1673,153 +507,78 @@ img{
 
     .nav-menu a{
 
-        font-size:17px;
-        padding:5px 0;
+        font-size:18px;
 
     }
 
-}
+
+    /* HERO */
+
+    .hero{
+
+        padding:130px 20px 70px;
+
+    }
 
 
-/* ==========================================
-            HERO SECTION
-========================================== */
+    .hero-content{
 
-.hero{
+        text-align:center;
 
-    margin-top:80px;
-
-}
+    }
 
 
-/* =======================================
-        JUDUL WEBSITE
-======================================= */
+    .hero-text h1{
 
-.judul-website{
+        font-size:38px;
 
-    width:90%;
-    margin:30px auto;
-
-    padding:45px 20px;
-
-    text-align:center;
-
-    background:linear-gradient(
-        135deg,
-        #6D28D9,
-        #8B5CF6
-    );
-
-    border-radius:35px;
-
-    box-shadow:
-    0 15px 35px rgba(109,40,217,0.25);
-
-}
+    }
 
 
-/* NEW PRIMAGAMA */
+    .hero-text h2{
 
-.judul-website h1{
+        font-size:25px;
 
-    color:white;
-
-    font-size:42px;
-
-    font-weight:800;
-
-    margin-bottom:15px;
-
-}
+    }
 
 
-/* SUNTER INDAH */
+    .hero-text p{
 
-.judul-website h2{
+        font-size:16px;
 
-    color:#FFD54A;
-
-    font-size:24px;
-
-    letter-spacing:5px;
-
-    margin-bottom:20px;
-
-}
+    }
 
 
-/* SUB JUDUL */
+    /* BUTTON */
 
-.judul-website p{
+    .btn{
 
-    color:white;
+        width:100%;
 
-    font-size:18px;
+        max-width:280px;
 
-    font-weight:600;
-
-    margin:0;
-
-}
-/* ===========================
-   JUDUL NEW PRIMAGAMA
-=========================== */
-
-.hero-brand{
-
-    color:#FFFFFF;
-    font-size:52px;
-    font-weight:800;
-    margin-bottom:5px;
-    line-height:1.1;
-
-}
-
-.hero-cabang{
-
-    color:#FFD54F;
-    font-size:28px;
-    font-weight:700;
-    margin-bottom:25px;
-
-}
-
-/* ==========================================
-        AGAR TIDAK TERTUTUP NAVBAR
-========================================== */
-
-body{
-    padding-top:0;
-}
+    }
 
 
-/* ==========================================
-        RESPONSIVE JUDUL WEBSITE
-========================================== */
-
-@media (max-width:768px){
+    /* CARD */
 
     .judul-website{
 
-        width:92%;
-        padding:35px 15px;
+        padding:35px 20px;
 
     }
 
 
     .judul-website h1{
 
-        font-size:28px;
+        font-size:30px;
 
     }
 
 
     .judul-website h2{
 
-        font-size:18px;
-
-        letter-spacing:3px;
+        font-size:20px;
 
     }
 
@@ -1829,5 +588,1404 @@ body{
         font-size:15px;
 
     }
+
+
+}
+
+/* ==========================================
+                SECTION TITLE
+========================================== */
+
+section{
+
+    padding:100px 8%;
+
+}
+
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+
+.section-title h2{
+
+    font-size:42px;
+
+    color:#6D28D9;
+
+    margin-bottom:15px;
+
+    font-weight:800;
+
+}
+
+
+.section-title p{
+
+    font-size:18px;
+
+    color:#666;
+
+    line-height:1.8;
+
+    max-width:750px;
+
+    margin:auto;
+
+}
+
+
+
+/* ==========================================
+                TENTANG KAMI
+========================================== */
+
+.tentang{
+
+    background:#FFFFFF;
+
+}
+
+
+.about-feature{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+
+.feature-card{
+
+    background:#FFFFFF;
+
+    padding:40px 30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    border:2px solid #EFEAFD;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.4s ease;
+
+    min-height:330px;
+
+}
+
+
+.feature-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 20px 40px rgba(109,40,217,.18);
+
+}
+
+
+.feature-card i{
+
+    font-size:60px;
+
+    color:#6D28D9;
+
+    margin-bottom:25px;
+
+}
+
+
+.feature-card h3{
+
+    font-size:26px;
+
+    color:#222;
+
+    margin-bottom:18px;
+
+    font-weight:700;
+
+}
+
+
+.feature-card p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+}
+
+
+
+/* ==========================================
+                PROGRAM BELAJAR
+========================================== */
+
+.program{
+
+    background:#F8F8FC;
+
+}
+
+
+.program-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+
+.program-card{
+
+    background:#FFFFFF;
+
+    border:3px solid #6D28D9;
+
+    border-radius:25px;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    transition:.4s ease;
+
+    min-height:400px;
+
+}
+
+
+.program-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.12);
+
+}
+
+
+.program-icon{
+
+    width:80px;
+    height:80px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#FFD54F;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+
+.program-icon i{
+
+    color:#6D28D9;
+
+    font-size:32px;
+
+}
+
+
+.program-card h3{
+
+    color:#6D28D9;
+
+    font-size:24px;
+
+    margin-bottom:25px;
+
+    font-weight:700;
+
+}
+
+
+.program-card p{
+
+    color:#666;
+
+    line-height:2;
+
+    font-size:16px;
+
+}
+
+
+
+/* ==========================================
+                HOVER EFFECT
+========================================== */
+
+.feature-card,
+.program-card{
+
+    transition:.4s ease;
+
+}
+
+
+.feature-card:hover,
+.program-card:hover{
+
+    transform:
+    translateY(-10px);
+
+}
+
+
+
+/* ==========================================
+                TABLET
+========================================== */
+
+@media(max-width:992px){
+
+
+    .about-feature{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+    .program-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+}
+
+
+
+/* ==========================================
+                MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+
+    section{
+
+        padding:80px 25px;
+
+    }
+
+
+    .section-title h2{
+
+        font-size:32px;
+
+    }
+
+
+    .section-title p{
+
+        font-size:16px;
+
+    }
+
+
+    /* Tentang Kami */
+
+    .about-feature{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .feature-card{
+
+        min-height:auto;
+
+    }
+
+
+    .feature-card i{
+
+        font-size:50px;
+
+    }
+
+
+    .feature-card h3{
+
+        font-size:24px;
+
+    }
+
+
+    /* Program */
+
+    .program-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .program-card{
+
+        min-height:auto;
+
+    }
+
+
+    .program-card h3{
+
+        font-size:22px;
+
+    }
+
+
+    .program-icon{
+
+        width:75px;
+        height:75px;
+
+    }
+
+
+}
+
+/* ==========================================
+        MENGAPA MEMILIH KAMI
+========================================== */
+
+.why-us{
+
+    background:#FFFFFF;
+
+}
+
+
+.why-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+
+.why-card{
+
+    background:#FFFFFF;
+
+    padding:40px 30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    border:3px solid #6D28D9;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.4s ease;
+
+    min-height:280px;
+
+}
+
+
+.why-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 20px 40px rgba(109,40,217,.18);
+
+}
+
+
+.why-card i{
+
+    font-size:55px;
+
+    color:#FFD54F;
+
+    margin-bottom:25px;
+
+}
+
+
+.why-card h3{
+
+    color:#6D28D9;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+
+.why-card p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+}
+
+
+
+/* ==========================================
+                FASILITAS
+========================================== */
+
+.fasilitas{
+
+    background:#F8F8FC;
+
+}
+
+
+.fasilitas-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+
+.fasilitas-card{
+
+    background:#FFFFFF;
+
+    padding:40px 25px;
+
+    border-radius:25px;
+
+    border:3px solid #6D28D9;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.4s ease;
+
+    min-height:300px;
+
+}
+
+
+.fasilitas-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 20px 40px rgba(109,40,217,.18);
+
+}
+
+
+.fasilitas-card i{
+
+    width:80px;
+    height:80px;
+
+    background:#FFD54F;
+
+    color:#6D28D9;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:auto;
+    margin-bottom:25px;
+
+    font-size:32px;
+
+}
+
+
+.fasilitas-card h3{
+
+    color:#6D28D9;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+
+.fasilitas-card p{
+
+    color:#666;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+
+
+/* ==========================================
+            HOVER EFFECT
+========================================== */
+
+.why-card,
+.fasilitas-card{
+
+    transition:.4s ease;
+
+}
+
+
+.why-card:hover,
+.fasilitas-card:hover{
+
+    transform:
+    translateY(-10px);
+
+}
+
+
+
+/* ==========================================
+            RESPONSIVE TABLET
+========================================== */
+
+@media(max-width:992px){
+
+
+    /* Mengapa Kami */
+
+    .why-container{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+    /* Fasilitas */
+
+    .fasilitas-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+}
+
+
+
+/* ==========================================
+            RESPONSIVE MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+
+    /* Mengapa Kami */
+
+    .why-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .why-card{
+
+        min-height:auto;
+
+    }
+
+
+    .why-card i{
+
+        font-size:48px;
+
+    }
+
+
+    .why-card h3{
+
+        font-size:22px;
+
+    }
+
+
+    /* Fasilitas */
+
+    .fasilitas-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .fasilitas-card{
+
+        min-height:auto;
+
+    }
+
+
+    .fasilitas-card h3{
+
+        font-size:22px;
+
+    }
+
+
+    .fasilitas-card i{
+
+        width:75px;
+        height:75px;
+
+        font-size:28px;
+
+    }
+
+
+}
+
+/* ==========================================
+            FASILITAS BELAJAR
+========================================== */
+
+.fasilitas-belajar{
+
+    background:#FFFFFF;
+
+}
+
+
+.fasilitas-belajar .section-title{
+
+    margin-bottom:60px;
+
+}
+
+
+/* Menggunakan class .fasilitas-grid
+   dan .fasilitas-card yang sudah ada
+   pada Tahap 3 */
+
+
+/* ==========================================
+                KONTAK
+========================================== */
+
+.kontak{
+
+    background:#F8F8FC;
+
+}
+
+
+.kontak-center{
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:50px;
+
+    background:#FFFFFF;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+
+.kontak-center:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+.kontak-center h3{
+
+    color:#6D28D9;
+
+    font-size:32px;
+
+    font-weight:800;
+
+    margin-bottom:30px;
+
+}
+
+
+.kontak-center p{
+
+    color:#555;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+
+.kontak-center i{
+
+    color:#6D28D9;
+
+    font-size:32px;
+
+}
+
+
+.kontak-center a{
+
+    color:#222;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.kontak-center a:hover{
+
+    color:#6D28D9;
+
+}
+
+
+
+/* ==========================================
+                GOOGLE MAPS
+========================================== */
+
+.maps{
+
+    margin-top:50px;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+.maps iframe{
+
+    width:100%;
+
+    display:block;
+
+    border:none;
+
+}
+
+
+
+/* ==========================================
+                HOVER EFFECT
+========================================== */
+
+.kontak-center,
+.maps{
+
+    transition:.4s ease;
+
+}
+
+
+.maps:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* ==========================================
+            RESPONSIVE TABLET
+========================================== */
+
+@media(max-width:992px){
+
+
+    .kontak-center{
+
+        padding:40px;
+
+    }
+
+
+    .kontak-center h3{
+
+        font-size:28px;
+
+    }
+
+
+}
+
+
+
+/* ==========================================
+            RESPONSIVE MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+
+    /* KONTAK */
+
+    .kontak-center{
+
+        padding:30px 25px;
+
+        border-radius:20px;
+
+    }
+
+
+    .kontak-center h3{
+
+        font-size:24px;
+
+    }
+
+
+    .kontak-center p{
+
+        font-size:16px;
+
+    }
+
+
+    .kontak-center i{
+
+        font-size:28px;
+
+    }
+
+
+    /* GOOGLE MAPS */
+
+    .maps{
+
+        border-radius:20px;
+
+    }
+
+
+    .maps iframe{
+
+        height:300px;
+
+    }
+
+
+}
+
+/* ==========================================
+                FOOTER
+========================================== */
+
+footer{
+
+    background:#1F2937;
+
+    color:white;
+
+    padding:80px 8% 30px;
+
+}
+
+
+.footer-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:50px;
+
+}
+
+
+.footer-box h3{
+
+    color:#FFD54F;
+
+    font-size:24px;
+
+    margin-bottom:25px;
+
+    font-weight:700;
+
+}
+
+
+.footer-box p{
+
+    color:#DDDDDD;
+
+    line-height:1.9;
+
+    margin-bottom:15px;
+
+}
+
+
+.footer-box a{
+
+    display:block;
+
+    color:#DDDDDD;
+
+    text-decoration:none;
+
+    margin-bottom:15px;
+
+    transition:.3s;
+
+}
+
+
+.footer-box a:hover{
+
+    color:#FFD54F;
+
+    padding-left:8px;
+
+}
+
+
+.footer-box i{
+
+    color:#FFD54F;
+
+    margin-right:10px;
+
+}
+
+
+.footer-bottom{
+
+    margin-top:50px;
+
+    padding-top:25px;
+
+    border-top:
+    1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    color:#CCCCCC;
+
+    font-size:15px;
+
+}
+
+
+
+/* ==========================================
+            SCROLL TO TOP BUTTON
+========================================== */
+
+#scrollTopBtn{
+
+    position:fixed;
+
+    bottom:30px;
+    right:30px;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#FFD54F;
+
+    color:#222;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:99999;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s ease;
+
+}
+
+
+#scrollTopBtn:hover{
+
+    transform:
+    translateY(-5px);
+
+}
+
+
+
+/* ==========================================
+                ANIMATIONS
+========================================== */
+
+
+/* Hero Animation */
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Floating Animation */
+
+@keyframes floating{
+
+    0%{
+
+        transform:
+        translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+/* Fade Animation */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:
+        translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+
+/* ==========================================
+            CARD ANIMATION
+========================================== */
+
+.program-card,
+.feature-card,
+.why-card,
+.fasilitas-card{
+
+    animation:
+    fadeUp .8s ease;
+
+}
+
+
+
+/* ==========================================
+                HOVER EFFECT
+========================================== */
+
+.btn,
+.program-card,
+.feature-card,
+.why-card,
+.fasilitas-card,
+.kontak-center{
+
+    transition:
+    all .3s ease;
+
+}
+
+
+
+/* ==========================================
+                GLOBAL IMAGE
+========================================== */
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+    display:block;
+
+}
+
+
+
+/* ==========================================
+                RESPONSIVE TABLET
+========================================== */
+
+@media(max-width:992px){
+
+
+    footer{
+
+        padding:70px 6% 25px;
+
+    }
+
+
+    .footer-container{
+
+        gap:40px;
+
+    }
+
+
+    #scrollTopBtn{
+
+        width:55px;
+        height:55px;
+
+        font-size:22px;
+
+    }
+
+}
+
+
+
+/* ==========================================
+                RESPONSIVE MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+
+    /* FOOTER */
+
+    footer{
+
+        padding:60px 25px 25px;
+
+    }
+
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+
+    .footer-box h3{
+
+        font-size:22px;
+
+    }
+
+
+    .footer-box p{
+
+        font-size:15px;
+
+    }
+
+
+    .footer-box a{
+
+        font-size:15px;
+
+    }
+
+
+    .footer-bottom{
+
+        font-size:14px;
+
+    }
+
+
+    /* SCROLL BUTTON */
+
+    #scrollTopBtn{
+
+        width:50px;
+        height:50px;
+
+        bottom:20px;
+        right:20px;
+
+        font-size:20px;
+
+    }
+
+
+}
+
+
+
+/* ==========================================
+                SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+
+    .section-title h2{
+
+        font-size:28px;
+
+    }
+
+
+    .hero-text h1{
+
+        font-size:32px;
+
+    }
+
+
+    .hero-text h2{
+
+        font-size:22px;
+
+    }
+
+
+    .hero-text p{
+
+        font-size:15px;
+
+    }
+
+
+    .btn{
+
+        padding:14px 30px;
+
+        font-size:15px;
+
+    }
+
 
 }
