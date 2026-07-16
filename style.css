@@ -1628,10 +1628,76 @@ img{
 }
 
 
-/* ==========================================
-            JUDUL WEBSITE
-========================================== */
+/* =======================================
+        JUDUL WEBSITE
+======================================= */
 
+.judul-website{
+
+    width:90%;
+    margin:30px auto;
+
+    padding:45px 20px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        #6D28D9,
+        #8B5CF6
+    );
+
+    border-radius:35px;
+
+    box-shadow:
+    0 15px 35px rgba(109,40,217,0.25);
+
+}
+
+
+/* NEW PRIMAGAMA */
+
+.judul-website h1{
+
+    color:white;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+
+}
+
+
+/* SUNTER INDAH */
+
+.judul-website h2{
+
+    color:#FFD54A;
+
+    font-size:24px;
+
+    letter-spacing:5px;
+
+    margin-bottom:20px;
+
+}
+
+
+/* SUB JUDUL */
+
+.judul-website p{
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin:0;
+
+}
 /* ===========================
    JUDUL NEW PRIMAGAMA
 =========================== */
@@ -1672,9 +1738,11 @@ body{
 
     .judul-website{
 
-        padding:35px 20px;
+        width:92%;
+        padding:35px 15px;
 
     }
+
 
     .judul-website h1{
 
@@ -1682,15 +1750,19 @@ body{
 
     }
 
-    .judul-website p{
+
+    .judul-website h2{
 
         font-size:18px;
 
+        letter-spacing:3px;
+
     }
 
-    .judul-website span{
 
-        font-size:14px;
+    .judul-website p{
+
+        font-size:15px;
 
     }
 
